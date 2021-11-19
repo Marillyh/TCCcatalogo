@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+  <head>
+  <link rel="stylesheet" type= "text/css" href="">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <title> Meu Catalogo Digital </title>
+  </head>
+  <body>
+  
+	<div class="w3-top">
+	  <div class="w3-bar w3-wide w3-padding w3-card">
+		<p class="w3-bar-item"> <b>SEU</b> Catalogo Digital</p>
+		<div class="w3-right w3-hide-small">
+		  <a href="/" class="w3-bar-item">Pagina inicial</a>
+		  <a href="/login/" class="w3-bar-item">Login</a>
+		</div>
+	  </div>
+	</div>
+	
+<center> 
+<br><br><br>
+<img src="{% static 'img/logo.png' %}" style="width:32%">	<h2 class= "cor"> Minha Loja </h2 > 
+	
+	<div class="w3-container form">
+		<br> <br>
+			<form action="/logar/" method="post"> {% csrf_token %}
+				<h2 class="cor"> Minha Loja </h2 > 
+				<h6 class="cor"> login </h6>
+				<div class="w3-container "> 
+		  			<p><input class="w3-input w3-border" type="text" placeholder="Usuário" required name="username"></p>
+		  			<p><input class="w3-input w3-border" type="password" placeholder="Senha" required name="password"></p>
+		 	 		<p><button class="w3-button" type="submit">ENTRAR</button></p>
+				</div>
+			</form>
+		
+	</div>
+
+
+	

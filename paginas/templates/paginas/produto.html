@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<title>Meu Catalogo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/produto.css' %}">
+
+<div class="about-section">
+  <h1>Meu Catálogo Digital</h1>
+  <p>Sejam bem-vindos a minha loja</p>
+  <p>Veja alguns dos produtos disponiveis</p>
+</div> 
+
+<h2 style="text-align:center">Produtos</h2>
+  {% for produto in produtos %}
+  <div class="column">
+    <div class="card">
+      <img src="/media/{{ produto.imagem }} " style="width:100%" >
+      <div class="container">
+        <h2>{{ produto.titulo }}</h2>
+        <p><b>Tam: </b>{{ produto.tamanho }}</p>
+        <p><b>Informações do produto: </b>{{ produto.descricao }}</p>
+        <p class="preco"><b>R$ </b>{{ produto.preco }}</p>
+      </div>
+    </div>
+  </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
+

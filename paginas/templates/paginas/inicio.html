@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+  <head>
+  <link rel="stylesheet" type= "text/css" href="inicio.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <title> Meu Catalogo Digital </title>
+  </head>
+  <body>
+  
+	<div class="w3-top">
+	  <div class="w3-bar w3-wide w3-padding w3-card">
+		<p class="w3-bar-item"> <b>SEU</b> Catalogo Digital</p>
+		<div class="w3-right w3-hide-small">
+		  <a href="/" class="w3-bar-item">Pagina inicial</a>
+		  <a href="/login/" class="w3-bar-item">Login</a>
+		</div>
+	  </div>
+	</div>
+	
+<center> 
+<br><br>
+	<img src="{% static 'img/logo.png' %}" style="width:32%">
+	<br>
+	<div class= "w3-half">
+		<div class = "card">
+		<h1> Catálogo online de produtos com pedidos via WhatsApp </h1>
+		<h2> Comece a vender pela internet hoje mesmo!
+			O catálogo online descomplicado que vai bombar suas vendas na sua região! </h2>
+		<h3>	Um catálogo digital para você vender mais de forma simples, descomplicada, conectado com seu WhatsApp. </h3>
+        </div>	
+	</div>
+	
+	<div class="w3-half w3-container form" >
+		<form action="/cadastrar-usuario/" method="post" class="w3-card" > {% csrf_token %}
+			<h2 class="cor"> Cadastre-se </h2 >
+				<div  class = " w3-container " >
+				Usuario: <p><input class="w3-input w3-border" type="text" required name="input-username"></p>
+				E-mail: <p><input class="w3-input w3-border" type="email" required name="input-email"></p>
+				Senha: <p><input class="w3-input w3-border" type="password" required name="input-password"></p>
+				</select ><center>
+				<button class="w3-button" type="submit">Cadastrar</button>
+				</div > 
+		</form >
+	
+</div>
+</html>
